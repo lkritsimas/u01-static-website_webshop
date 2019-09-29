@@ -7,6 +7,11 @@
   padding-right: $grid-gutter / 1.5;
   padding-left: $grid-gutter / 1.5;
   
+
+  a {
+    text-decoration: none;
+  }
+    
   a,
   button {
     color: get-color('white');
@@ -23,7 +28,16 @@
 .navbar__title {
   a {
     color: get-color('white');
+    text-transform: uppercase;
     font-size: 24px;
+  }
+}
+
+.navbar__menu {
+  flex-direction: column;
+  a {
+    font-size: 16px;
+    text-transform: uppercase;
   }
 }
 
@@ -38,12 +52,11 @@
   }
 }
 
-.navbar__menu {
-  flex-direction: column;
-}
-
 // Search bar
 .navbar__search {
+  display: flex;
+  align-items: center;
+
   // Search button
   .btn {
     color: get-color('white');
@@ -51,6 +64,9 @@
 
   // Search field
   input {
+    height: 40px;
     border: none;
+    border-radius: 4px;
+    padding: 0 $grid-gutter / 2;
   }
 }

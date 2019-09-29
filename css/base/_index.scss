@@ -3,3 +3,13 @@ html, body {
   font-size: $font-size-base;
   line-height: 1.5;
 }
+
+a {
+  // Remove underline
+  text-decoration: none;
+
+  &:hover {
+    // Add underline on hover
+    text-decoration: underline;
+  }
+}

@@ -1,11 +1,11 @@
 // Generate hidden classes
-@include generate-display('hidden') {
+@include generate-display-class('hidden') {
   display: none !important;
 }
 
 // Generate visually hidden classes
 // "Borrowed" from the "2019-09-23" lecture - hope that's alright
-@include generate-display('v-hidden') {
+@include generate-display-class('v-hidden') {
   // Ta bort elementet från det normala flödet
   position: absolute;
 

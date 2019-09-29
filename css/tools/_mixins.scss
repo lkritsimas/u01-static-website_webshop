@@ -10,13 +10,13 @@
 /// Reusable media query based on predefined min and max breakpoint sizes
 /// @requires {variable} display-breakpoints
 /// @param {String} $class
-@mixin generate-display($class) {
+@mixin generate-display-class($class) {
   // Loop through breakpoints
   @each $threshold, $query in $display-breakpoints {
     // Media query
     @media #{$query} {
-    // Create class
-    .#{$class}-#{$threshold} {
+      // Create class
+      .#{$class}-#{$threshold} {
         @content;
       }
     }
