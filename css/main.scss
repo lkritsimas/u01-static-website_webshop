@@ -1,8 +1,10 @@
-@import 'tools/reset',
-        'tools/variables',
+@import 'tools/variables',
         'tools/mixins',
         'tools/functions',
         'tools/utilities';
+
+@import 'base/reset',
+        'base/index';
 
 @import 'mixins/grid';
 

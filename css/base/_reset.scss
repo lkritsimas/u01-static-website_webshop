@@ -1,0 +1,13 @@
+// Reset all elements
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Set box sizing on before and after selectors
+// I thought this was done with the code above - apparently not
+*::before,
+*::after {
+  box-sizing: inherit;
+}
