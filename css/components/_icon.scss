@@ -1,0 +1,26 @@
+.icon {
+  // Inline container
+  display: inline-flex;
+  
+  // Horizontal center
+  justify-content: center;
+
+  // Icon size
+  font-size: map-get($icon-size, 'default');
+
+  // Reset line height
+  line-height: 1;
+  
+  // Disable text highlighting
+  user-select: none;
+}
+
+// Generate icon sizes
+@each $size, $value in $icon-size {
+  // Ignore default size
+  @if $size != 'default' {
+    .icon--#{$size} {
+      font-size: $value;
+    }
+  }
+}

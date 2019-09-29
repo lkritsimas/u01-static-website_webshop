@@ -22,3 +22,9 @@ $grid-gutter: 24px !default;
 /// Flex grid
 /// @type Number
 $flex-basis-base: 8.333333% !default; // Lowest flex-basis value
+
+/// Icon sizes
+/// @type Map
+$icon-size: (
+  'default': 24px
+) !default;
