@@ -1,0 +1,19 @@
+@mixin container($gutter: $grid-gutter) {
+  padding-right: $gutter;
+  padding-left: $gutter;
+  margin: 0 auto;
+}
+
+@mixin row($gutter: $grid-gutter) {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: $gutter;
+  margin-left: $gutter;
+}
+
+@mixin col($gutter: $grid-gutter) {
+  max-width: 100%;
+  margin-right: $gutter;
+  margin-left: $gutter;
+  list-style: none; // If used on lists
+}

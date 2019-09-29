@@ -1,0 +1,8 @@
+/// Reusable media query based on predefined breakpoint sizes
+/// @requires {variable} breakpoints
+/// @param {String} $breakpoint - Breakpoint
+@mixin responsive($breakpoint) {
+  @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+    @content;
+  }
+}

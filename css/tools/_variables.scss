@@ -1,0 +1,24 @@
+/// Colors - Defining our color variables for consistent theming
+/// @see {function} get-color
+/// @type Map
+$colors: (
+  'black': #000000,
+  'white': #ffffff
+);
+
+/// Breakpoint sizes for responsive media queries
+/// @see {mixin} responsive
+/// @type Map
+$grid-breakpoints: (
+  'xs': 600px,
+  'sm': 900px,
+  'md': 1200px
+) !default;
+
+/// Gutter spacing
+/// @type Number
+$grid-gutter: 24px !default;
+
+/// Flex grid
+/// @type Number
+$flex-basis-base: 8.333333% !default; // Lowest flex-basis value

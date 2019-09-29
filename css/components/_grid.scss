@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  @include container;
+
+  // Full width
+  &.fluid {
+    max-width: 100%;
+  }
+
+  // Container breakpoint sizes
+  @each $threshold, $width in $grid-breakpoints {
+    @include responsive($threshold) {
+      max-width: $width;
+    }
+  }
+}
+
+.row {
+  @include row;
+}
+
+.col {
+  @include col;
+
+  // Looping through breakpoints
+  @each $threshold, $width in $grid-breakpoints {
+    // Responsive mixin
+    @include responsive($threshold) {
+      // Creating the 12 column grid for each breakpoint size
+      @for $i from 1 through 12 {
+        &-#{$threshold}-#{$i} {
+          @include col;
+          flex-basis: $flex-basis-base * $i;
+        }
+      }
+    }
+  }
+}

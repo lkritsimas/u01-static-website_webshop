@@ -1,0 +1,15 @@
+/// Gets a color from our pre-defined $colors variable, optionally applies alpha 
+//
+/// @param {Color} $color - Input color
+/// @param {Number} $a - Alpha
+/// @return {Color}
+@function get-color($color, $a: null) {
+  $res: map-get($colors, $color);
+  
+  // Get RGBA value if alpha was passed
+  @if $a {
+    $res: change-color($res, $alpha: $a);
+  }
+
+  @return $res;
+}

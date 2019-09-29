@@ -1,0 +1,12 @@
+.btn {
+  display: inline-flex;
+  align-items: center; // Vertical center
+  justify-content: center; // Horizontal center
+  background-color: transparent;
+  border: none;
+
+  &--icon {
+    height: 48px;
+    width: 48px;
+  }
+}
