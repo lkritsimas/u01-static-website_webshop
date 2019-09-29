@@ -6,32 +6,43 @@
   background-color: get-color('black');
   padding-right: $grid-gutter / 1.5;
   padding-left: $grid-gutter / 1.5;
+}
 
-  // Navbar title
-  & > &__title {
-    a {
-      color: get-color('white');
-      font-size: 24px;
-    }
+// Navbar title
+.navbar__title {
+  a {
+    color: get-color('white');
+    font-size: 24px;
+  }
+}
+
+// Navigation menus
+.navbar__menu,
+.navbar__actions {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+
+  a,
+  button {
+    color: get-color('white');
+    padding: $grid-gutter / 2;
   }
 
-  // primary navigation bar
-  & > &__menu,
-  & > &__actions {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
+  @include responsive('sm') {
+    flex-direction: row;
+  }
+}
 
-    a,
-    button {
-      color: get-color('white');
-      padding: $grid-gutter / 2;
-    }
-
-    @include responsive('sm') {
-      flex-direction: row;
-    }
+// Search bar
+.navbar__search {
+  // Search button
+  .btn {
+    color: get-color('white');
   }
 
-
+  // Search field
+  input {
+    border: none;
+  }
 }

@@ -1,12 +1,18 @@
 .btn {
   display: inline-flex;
-  align-items: center; // Vertical center
-  justify-content: center; // Horizontal center
+  // Centering
+  align-items: center;
+  justify-content: center;
+
   background-color: transparent;
   border: none;
 
-  &--icon {
-    height: 48px;
-    width: 48px;
-  }
+  // Spacing between buttons
+  margin: $grid-gutter / 3;
+}
+
+// Icon-only button
+.btn--icon {
+  height: 48px;
+  width: 48px;
 }
