@@ -1,0 +1,35 @@
+// Generate hidden classes
+@include generate-display('hidden') {
+  display: none !important;
+}
+
+// Generate visually hidden classes
+// "Borrowed" from the "2019-09-23" lecture - hope that's alright
+@include generate-display('v-hidden') {
+  // Ta bort elementet från det normala flödet
+  position: absolute;
+
+  // Lösning för ihoptryckt text
+  white-space: nowrap;
+
+  // Ge elementet minsta möjliga storlek (vissa skärmläsare ignorerar element med höjd och bredd satt till 0)
+  width: 1px;
+  height: 1px;
+
+  // Dölj innehåll med overflwo efter ändring i storlek
+  overflow: hidden;
+
+  // Ta bort alla properties som kan ändra elementets storlek
+  border: 0;
+  padding: 0;
+
+  // Clipping definerar vilka delar av ett element som ska visas
+  // Utdaterad clip egenskap för äldre webbläsare
+  clip: rect(0 0 0 0);
+
+  // clip-path är för nyare webbläsare. inset(50%) definerar en rektangel som får innehållet att försvinna
+  clip-path: inset(50%);
+
+  // Det råder lite debatt kring varför denna behövs, det pekar på att man vill förhindra att innehållet ska renderas som en 1x1px i vissa webbläsare
+  margin: -1px;
+}

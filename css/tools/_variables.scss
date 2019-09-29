@@ -15,6 +15,14 @@ $grid-breakpoints: (
   'md': 1200px
 ) !default;
 
+/// Display breakpoint sizes for responsive media queries
+/// @see {mixin} generate-display
+/// @type Map
+$display-breakpoints: (
+  'sm-down': 'only screen and (max-width: #{map-get($grid-breakpoints, 'sm') - 1})',
+  'sm-up': 'only screen and (min-width: #{map-get($grid-breakpoints, 'sm')})'
+) !default;
+
 /// Gutter spacing
 /// @type Number
 $grid-gutter: 24px !default;

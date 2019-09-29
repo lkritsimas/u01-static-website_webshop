@@ -6,6 +6,17 @@
   background-color: get-color('black');
   padding-right: $grid-gutter / 1.5;
   padding-left: $grid-gutter / 1.5;
+  
+  a,
+  button {
+    color: get-color('white');
+    padding: $grid-gutter / 2;
+  }
+}
+
+// Toggle button
+.navbar__toggle {
+  margin-left: -$grid-gutter / 1.5;
 }
 
 // Navbar title
@@ -20,18 +31,15 @@
 .navbar__menu,
 .navbar__actions {
   display: flex;
-  flex-direction: column;
   list-style: none;
-
-  a,
-  button {
-    color: get-color('white');
-    padding: $grid-gutter / 2;
-  }
 
   @include responsive('sm') {
     flex-direction: row;
   }
+}
+
+.navbar__menu {
+  flex-direction: column;
 }
 
 // Search bar
