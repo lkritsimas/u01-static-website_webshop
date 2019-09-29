@@ -1,3 +1,7 @@
+// Generate color classes
+@include generate-color-class('text', color);
+@include generate-color-class('background', background);
+
 // Generate hidden classes
 @include generate-display-class('hidden') {
   display: none !important;

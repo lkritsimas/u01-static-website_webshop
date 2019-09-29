@@ -22,3 +22,15 @@
     }
   }
 }
+
+/// Generate color classes
+/// @requires {variable} $colors
+/// @param {String} $class
+/// @param {String} $attr
+@mixin generate-color-class($class, $attr) {
+  @each $color, $value in $colors {
+    .#{$color}--#{$class} {
+      #{$attr}: $value !important;
+    }
+  }
+}
