@@ -4,7 +4,7 @@
 $colors: (
   'black': #000000,
   'white': #ffffff
-);
+) !default;
 
 /// Breakpoint sizes for responsive media queries
 /// @see {mixin} responsive
@@ -22,6 +22,14 @@ $grid-gutter: 24px !default;
 /// Flex grid
 /// @type Number
 $flex-basis-base: 8.333333% !default; // Lowest flex-basis value
+
+/// Font family
+/// @type List
+$font-family: 'Source Sans Pro', sans-serif !default;
+
+/// Baseline font size
+/// @type Number
+$font-size-base: 14px !default;
 
 /// Icon sizes
 /// @type Map
