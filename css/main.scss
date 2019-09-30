@@ -8,6 +8,9 @@
 
 @import 'mixins/grid';
 
+@import 'elements/header',
+        'elements/footer';
+
 @import 'components/grid',
         'components/spacer',
         'components/icon',

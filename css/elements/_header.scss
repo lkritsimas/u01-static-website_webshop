@@ -1,0 +1,10 @@
+// Main site header
+header:first-of-type {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+
+  @include responsive('xs') {
+    position: relative;
+  }
+}
