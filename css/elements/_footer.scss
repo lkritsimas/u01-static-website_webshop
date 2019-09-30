@@ -1,8 +1,51 @@
 footer:last-of-type {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   background: get-color('black');
+
+  // Remove dots
+  ul {
+    list-style: none;
+  }
+
+  p {
+    color: get-color('grey-light');
+  }
+
+  input {
+    max-width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    padding: 0 $grid-gutter / 2;
+  }
+
+  #subscribe {
+    color: get-color('white');
+    margin: 0;
+    padding: $grid-gutter / 2;
+    border: 1px solid get-color('white');
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: get-color('grey-light');
+    text-decoration: none;
+
+    &:hover {
+      color: get-color('white');
+    }
+  }
+}
+
+footer:last-of-type .row {
+  justify-content: center;
+}
+
+// Social buttons
+footer:last-of-type .social .btn.btn--icon {
+  color: get-color('grey-light');
+  &:hover {
+    color: get-color('white');
+  }
 }
