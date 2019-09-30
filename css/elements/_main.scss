@@ -1,0 +1,5 @@
+main {
+  @include responsive('sm') {
+    margin-top: $navbar-height !important;
+  }
+}

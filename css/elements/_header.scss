@@ -1,10 +1,12 @@
 // Main site header
 header:first-of-type {
   z-index: 2;
-  position: fixed;
+  position: relative;
   width: 100%;
+  max-height: $navbar-height;
+  overflow: hidden;
 
-  @include responsive('xs') {
-    position: relative;
+  @include responsive('sm') {
+    position: fixed;
   }
 }
