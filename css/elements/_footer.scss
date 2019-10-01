@@ -1,6 +1,7 @@
 footer:last-of-type {
   width: 100%;
-  background: get-color('black');
+  background: radial-gradient(get-color('black'), #222222),
+              get-color('black');
 
   // Remove dots
   ul {
@@ -9,6 +10,10 @@ footer:last-of-type {
 
   p {
     color: get-color('grey-light');
+  }
+
+  form {
+    margin-top: $grid-gutter / 2;
   }
 
   #subscribe {

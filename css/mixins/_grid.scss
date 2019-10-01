@@ -1,6 +1,7 @@
 @mixin container($gutter: $grid-gutter) {
-  padding-right: $gutter;
-  padding-left: $gutter;
+  // padding-right: $gutter;
+  // padding-left: $gutter;
+  padding: $gutter;
   margin: 0 auto;
 }
 
