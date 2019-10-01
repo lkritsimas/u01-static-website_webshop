@@ -51,6 +51,7 @@
 
         <!-- Search bar -->
         <div class="navbar__search hidden-sm-down">
+          <label for="search" class="v-hidden-sm-down v-hidden-sm-up">Search</label>
           <input 
             type="text" 
             id="search" 
@@ -88,15 +89,15 @@
     <!-- Main content -->
     <main role="main" class="container grow">
       <!-- Banner -->
-      <div class="row">
+      <section class="row">
         <div class="col col-xs-12">
           <div class="product__banner">
             <a href="#">
-              <img src="http://via.placeholder.com/1600x640/000000/FFFFFF?text=VIDEO BANNER" alt="">
+              <img src="http://via.placeholder.com/1600x640/000000/FFFFFF?text=VIDEO%20BANNER" alt="">
             </a>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Products -->
       <ul class="row">
         <li class="product__category col col-xs-12 col-sm-4 col-md-4">
@@ -116,60 +117,62 @@
         </li>
       </ul>
       <!-- Products -->
-      <ul class="row">
-        <li class="product col col-xs-6 col-sm-4 col-md-3">
-          <a href="#">
-            <figure class="product__media">
-              <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
-            </figure>
-          </a>
-          <div class="product__title">
-            <a href="#">Product name</a>
-          </div>
-          <div class="product__meta">
-            <span class="product__price">$0.00</span>
-          </div>
-        </li>
-        <li class="product col col-xs-6 col-sm-4 col-md-3">
-          <a href="#">
-            <figure class="product__media">
-              <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
-            </figure>
-          </a>
-          <div class="product__title">
-            <a href="#">Product name</a>
-          </div>
-          <div class="product__meta">
-            <span class="product__price">$0.00</span>
-          </div>
-        </li>
-        <li class="product col col-xs-6 col-sm-4 col-md-3">
-          <a href="#">
-            <figure class="product__media">
-              <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
-            </figure>
-          </a>
-          <div class="product__title">
-            <a href="#">Product name</a>
-          </div>
-          <div class="product__meta">
-            <span class="product__price">$0.00</span>
-          </div>
-        </li>
-        <li class="product col col-xs-6 col-sm-4 col-md-3">
-          <a href="#">
-            <figure class="product__media">
-              <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
-            </figure>
-          </a>
-          <div class="product__title">
-            <a href="#">Product name</a>
-          </div>
-          <div class="product__meta">
-            <span class="product__price">$0.00</span>
-          </div>
-        </li>
-      </ul>
+      <section>
+        <ul class="row">
+          <li class="product col col-xs-6 col-sm-4 col-md-3">
+            <a href="#">
+              <figure class="product__media">
+                <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
+              </figure>
+            </a>
+            <div class="product__title">
+              <a href="#">Product name</a>
+            </div>
+            <div class="product__meta">
+              <span class="product__price">$0.00</span>
+            </div>
+          </li>
+          <li class="product col col-xs-6 col-sm-4 col-md-3">
+            <a href="#">
+              <figure class="product__media">
+                <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
+              </figure>
+            </a>
+            <div class="product__title">
+              <a href="#">Product name</a>
+            </div>
+            <div class="product__meta">
+              <span class="product__price">$0.00</span>
+            </div>
+          </li>
+          <li class="product col col-xs-6 col-sm-4 col-md-3">
+            <a href="#">
+              <figure class="product__media">
+                <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
+              </figure>
+            </a>
+            <div class="product__title">
+              <a href="#">Product name</a>
+            </div>
+            <div class="product__meta">
+              <span class="product__price">$0.00</span>
+            </div>
+          </li>
+          <li class="product col col-xs-6 col-sm-4 col-md-3">
+            <a href="#">
+              <figure class="product__media">
+                <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
+              </figure>
+            </a>
+            <div class="product__title">
+              <a href="#">Product name</a>
+            </div>
+            <div class="product__meta">
+              <span class="product__price">$0.00</span>
+            </div>
+          </li>
+        </ul>
+      </section>
       <!-- Instagram feed -->
       <section class="product__instagram">
         <h2>@Instagram #CompanyName</h2>
@@ -258,7 +261,7 @@
             <h2 class="white--text">Newsletter</h2>
             <p>Subscribe now and get 10% off your first order!</p>
             <form>
-              <label for="newsletter" class="v-hidden-sm-down v-hidden-sm-up">Email:</label>
+              <label for="newsletter" class="v-hidden-sm-down v-hidden-sm-up">Email</label>
               <input type="email" id="newsletter" class="text-field" placeholder="Enter your email address">
               <button class="btn" id="subscribe">Subscribe</button>
             </form>
