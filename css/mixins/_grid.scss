@@ -8,12 +8,17 @@
 @mixin row($gutter: $grid-gutter) {
   display: flex;
   flex-flow: row wrap;
-  margin-right: $gutter;
-  margin-left: $gutter;
+
+  // Negative row margin prevents spacing issues, evens out 
+  // column padding and allows for multi-column/row nesting
+  margin-right: -$gutter / 3;
+  margin-left: -$gutter / 3;
 }
 
 @mixin col($gutter: $grid-gutter) {
   max-width: 100%;
+  width: 100%;
   padding: $gutter / 3;
-  list-style: none; // If used on lists
+  // If used on lists
+  list-style: none;
 }

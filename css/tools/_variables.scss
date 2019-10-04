@@ -22,6 +22,7 @@ $grid-breakpoints: (
 /// @type Map
 $display-breakpoints: (
   'xs': 'only screen and (max-width: #{map-get($grid-breakpoints, 'xs')})',
+  'xs-up': 'only screen and (min-width: #{map-get($grid-breakpoints, 'xs')})',
   'sm-down': 'only screen and (max-width: #{map-get($grid-breakpoints, 'sm') - 1})',
   'sm-up': 'only screen and (min-width: #{map-get($grid-breakpoints, 'sm')})'
 ) !default;

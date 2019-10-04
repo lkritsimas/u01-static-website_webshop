@@ -20,7 +20,9 @@ body {
 //   }
 // }
 
-img {
+img, 
+video {
   height: auto;
+  width: 100%;
   max-width: 100%;
 }

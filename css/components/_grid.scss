@@ -23,6 +23,15 @@
   @include col;
 
   // Looping through breakpoints
+  // Note to self in the far future: Fix this - should be doable without duplicate code
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      @include col;
+      flex-basis: $flex-basis-base * $i;
+    }
+  }
+
+  // Looping through breakpoints... again!
   @each $threshold, $width in $grid-breakpoints {
     // Responsive mixin
     @include responsive($threshold) {
