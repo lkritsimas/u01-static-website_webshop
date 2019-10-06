@@ -1,0 +1,28 @@
+#top {
+  // One step under navbar z-index and one step over media banner, good times!
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  bottom: $grid-gutter * 2;
+  right: $grid-gutter;
+
+  color: get-color('black');
+  background: get-color('white');
+  border: 2px solid get-color('grey-light');
+  border-radius: 100%;
+  text-align: center;
+  transition: all 250ms ease;
+}
+
+#top:hover {
+  color: get-color('pink');
+  border-color: get-color('pink');
+}
+
+#top i {
+  font-size: 24px;
+}

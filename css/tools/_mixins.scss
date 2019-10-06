@@ -7,7 +7,7 @@
   }
 }
 
-/// Reusable media query based on predefined min and max breakpoint sizes
+/// Reusable media query based on predefined min and/or max breakpoint sizes
 /// @requires {variable} display-breakpoints
 /// @param {String} $class
 @mixin generate-display-class($class) {
@@ -24,11 +24,13 @@
 }
 
 /// Generate color classes
+/// Loops through the $colors variable and creates text/background color classes
 /// @requires {variable} $colors
 /// @param {String} $class
-/// @param {String} $attr
+/// @param {String} $attr - color attribute to be used
 @mixin generate-color-class($class, $attr) {
   @each $color, $value in $colors {
+    // Example result: .black-background, .white-background ...
     .#{$color}--#{$class} {
       #{$attr}: $value !important;
     }

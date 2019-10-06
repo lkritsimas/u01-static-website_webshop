@@ -1,12 +1,13 @@
 // Main site header
-header:first-of-type {
+header[role=banner] {
   z-index: 2;
   position: relative;
   width: 100%;
-  max-height: $navbar-height;
+  height: 100%;
   overflow: hidden;
 
   @include responsive('sm') {
+    height: $navbar-height;
     position: fixed;
   }
 }

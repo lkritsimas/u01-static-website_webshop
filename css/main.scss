@@ -10,7 +10,6 @@
 @import 'mixins/grid';
 
 @import 'elements/header',
-        'elements/main',
         'elements/footer';
 
 @import 'components/grid',
@@ -20,4 +19,7 @@
         'components/button',
         'components/navbar',
         'components/product',
-        'components/media';
+        'components/media',
+        'components/logo',
+        'components/top',
+        'components/alert';

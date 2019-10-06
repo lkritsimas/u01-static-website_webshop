@@ -1,19 +1,29 @@
-footer:last-of-type {
+footer[role=contentinfo] {
   width: 100%;
-  background: radial-gradient(get-color('black'), #222222),
-              get-color('black');
-
-  // Remove dots
-  ul {
-    list-style: none;
-  }
+  background: get-color('black');
 
   p {
-    color: get-color('grey-light');
+    color: get-color('grey');
   }
 
   form {
     margin-top: $grid-gutter / 2;
+  }
+
+  h2 {
+    letter-spacing: 2px;
+  }
+
+  img {
+    width: auto;
+    height: 115px;
+  }
+
+  // Fine print
+  small {
+    color: get-color('grey');
+    text-align: center;
+    text-transform: uppercase;
   }
 
   #subscribe {
@@ -23,10 +33,15 @@ footer:last-of-type {
     border: 1px solid get-color('white');
     border-radius: 4px;
     text-transform: uppercase;
+
+    &:hover {
+      color: get-color('black');
+      background: get-color('white');
+    }    
   }
 
   a {
-    color: get-color('grey-light');
+    color: get-color('grey');
     text-decoration: none;
 
     &:hover {
@@ -35,13 +50,13 @@ footer:last-of-type {
   }
 }
 
-footer:last-of-type .row {
+footer[role=contentinfo] .row {
   justify-content: center;
 }
 
 // Social buttons
-footer:last-of-type .social .btn.btn--icon {
-  color: get-color('grey-light');
+footer[role=contentinfo] .social .btn.btn--icon {
+  color: get-color('grey');
   &:hover {
     color: get-color('white');
   }

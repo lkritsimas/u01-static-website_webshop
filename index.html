@@ -1,19 +1,21 @@
 <!--
-  Disclaimer
+  Disclaimer:
+  This is a school project - I do not own any of the videos/images on this site.
 
-  Placeholder
- -->
+  If you wish to have your material removed, please contact me at:
+  lacki.kritsimas@chasacademy.se
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <meta content="Placeholder" name="description">
-    <meta content="Placeholder" name="keywords">
-    <title>Company name</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap">
-    <link rel="stylesheet" href="./lib/fontello-1d2166af/css/fontello.css">
+    <meta content="Babyface clothing sells fashionable clothes and accessories - made by actual babies." name="description">
+    <meta content="Babyface, Clothes, Fashion, Basement, Sweatshop, Send, Help, Please" name="keywords">
+    <title>Babyface Clothing</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/fontello-2f97b860/css/fontello.css">
     <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
@@ -21,36 +23,35 @@
     <header role="banner" class="site__header shrink">
       <!-- Navigation bar -->
       <nav role="navigation" class="navbar">
+        <input type="checkbox" class="navbar__toggle-checkbox">
         <div class="navbar__toggle hidden-sm-up">
-          <button aria-label="Menu" class="btn btn--icon">
+          <button aria-label="Menu" class="navbar__button btn btn--icon">
             <i class="icon icon-menu"></i>
           </button>
         </div>
-
         <!-- Company logo -->
         <section class="navbar__title">
           <h1>
-            <a href="#">Company name</a>
+            <a href="#">
+              <img src="./assets/logo.svg" class="logo" alt="Babyface">
+            </a>
           </h1>
         </section>
-
         <!-- Navigation -->
         <ul class="navbar__menu hidden-sm-down">
           <li>
-            <a href="#">New</a>
+            <a href="#" class="navbar__link">New</a>
           </li>
           <li>
-            <a href="#">Shop</a>
+            <a href="#" class="navbar__link">Shop</a>
           </li>
           <li>
-            <a href="#" class="sale--text">Sale</a>
+            <a href="#" class="navbar__link sale--text">Sale</a>
           </li>
         </ul>
-
         <div class="spacer"></div>
-
         <!-- Search bar -->
-        <div class="navbar__search hidden-sm-down">
+        <form class="navbar__search hidden-sm-down">
           <label for="search" class="v-hidden-sm-down v-hidden-sm-up">Search</label>
           <input 
             type="text" 
@@ -59,165 +60,252 @@
             placeholder="Search..." 
             autocomplete="off"
           >
-          <button aria-label="Search" class="btn btn--icon">
+          <button class="navbar__button btn btn--icon" aria-label="Search">
             <!-- Search icon -->
             <i aria-hidden="true" class="icon icon-search"></i>
           </button>
-        </div>
-        
-      <!-- Actions -->
-      <ul class="navbar__actions">
+        </form>
+        <!-- Actions -->
+        <ul class="navbar__actions">
           <li>
-            <button aria-label="Wishlist" class="btn btn--icon">
+            <button aria-label="Wishlist" class="navbar__button btn btn--icon">
               <i aria-hidden="true" class="icon icon-heart"></i>
             </button>
           </li>
           <li>
-            <button aria-label="Login" class="btn btn--icon">
+            <button aria-label="Login" class="navbar__button btn btn--icon">
               <i aria-hidden="true" class="icon icon-user"></i>
             </button>
           </li>
           <li>
-            <button aria-label="Cart" class="btn btn--icon">
+            <button aria-label="Cart" class="navbar__button btn btn--icon">
               <i aria-hidden="true" class="icon icon-basket"></i>
             </button>
           </li>
-        </ul>        
+        </ul>
       </nav>
     </header>
-
     <!-- Main content -->
-    <main role="main" class="container grow">
+    <main role="main" class="grow">
       <!-- Banner -->
-      <section class="row">
-        <div class="col col-xs-12">
-          <div class="product__banner">
-            <a href="#" class="hidden-sm-down">
-              <img src="http://via.placeholder.com/1600x640/000000/FFFFFF?text=VIDEO%20BANNER" alt="">
-            </a>
-            <a href="#" class="hidden-sm-up">
-              <img src="http://via.placeholder.com/600x650/000000/FFFFFF?text=IMAGE%20BANNER" alt="">
-            </a>
+      <section>
+        <!-- Banner video -->
+        <a href="#" class="hidden-sm-down" aria-label="Summer 2019 campaign">
+          <div class="media media--banner">
+            <div class="media__overlay">
+              <div class="media__overlay-text">
+                <img src="./assets/summer-campaign.svg" alt="Summer 2019 campaign">
+              </div>
+            </div>
+            <video class="hidden-sm-down" autoplay muted loop playsinline poster="./assets/summer2019-campaign.jpg">
+              <source src="./assets/summer2019-campaign.mp4" type="video/mp4">
+              <img src="./assets/summer2019-campaign.jpg" alt="">
+            </video>
+          </div>
+        </a>
+        <!-- Banner image -->
+        <a href="#" class="hidden-sm-up" aria-label="Summer 2019 campaign">
+          <div class="media media--banner">
+            <div class="media__overlay">
+              <div class="media__overlay-text">
+                <img src="./assets/summer-campaign.svg" alt="Summer 2019 campaign">
+              </div>
+            </div>
+            <img src="./assets/summer2019-campaign.jpg" alt="">
+          </div>
+        </a>
+      </section>
+      <!-- Main content container -->
+      <div class="container">
+        <!-- Alert -->
+        <div class="row">
+          <div class="col alert__container">
+            <p class="alert">
+              <a href="#">We're currently in need of more slave labor for our brand new sweatshop!</a>
+            </p> 
           </div>
         </div>
-      </section>
-      <!-- Products -->
-      <ul class="row">
-        <li class="product__category col col-xs-12 col-sm-4 col-md-4">
-          <a href="#">
-            <img src="http://via.placeholder.com/900/222222/FFFFFF?text=CATEGORY" alt="">
-          </a>
-        </li>
-        <li class="product__category col col-xs-12 col-sm-4 col-md-4">
-          <a href="#">
-            <img src="http://via.placeholder.com/900/222222/FFFFFF?text=CATEGORY" alt="">
-          </a>
-        </li>
-        <li class="product__category col col-xs-12 col-sm-4 col-md-4">
-          <a href="#">
-            <img src="http://via.placeholder.com/900/222222/FFFFFF?text=CATEGORY" alt="">
-          </a>
-        </li>
-      </ul>
-      <!-- Products -->
-      <section>
+        <!-- Product categories -->
         <ul class="row">
-          <li class="product col col-xs-6 col-sm-6 col-md-3">
-            <a href="#">
-              <figure class="product__media">
-                <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
-              </figure>
+          <li class="product__category col col-xs-12 col-sm-4 col-md-4">
+            <a href="#" aria-label="View Chill Seeker lookbook">
+              <img src="https://blog.blackmilkclothing.com/wp-content/uploads/2019/09/CS-Lookbook-Tile.jpg" alt="">
             </a>
-            <div class="product__title">
-              <a href="#">Product name</a>
-            </div>
-            <div class="product__meta">
-              <span class="product__price">$0.00</span>
-            </div>
           </li>
-          <li class="product col col-xs-6 col-sm-6 col-md-3">
-            <a href="#">
-              <figure class="product__media">
-                <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
-              </figure>
+          <li class="product__category col col-xs-12 col-sm-4 col-md-4">
+            <a href="#" aria-label="View Sweet Dreams lookbook">
+              <img src="https://blog.blackmilkclothing.com/wp-content/uploads/2018/09/SD-Classics-Lookbook-Tile.jpg" alt="">
             </a>
-            <div class="product__title">
-              <a href="#">Product name</a>
-            </div>
-            <div class="product__meta">
-              <span class="product__price">$0.00</span>
-            </div>
           </li>
-          <li class="product col col-xs-6 col-sm-6 col-md-3">
-            <a href="#">
-              <figure class="product__media">
-                <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
-              </figure>
+          <li class="product__category col col-xs-12 col-sm-4 col-md-4">
+            <a href="#" aria-label="View Adventure Awaits lookbook">
+              <img src="https://blog.blackmilkclothing.com/wp-content/uploads/2019/03/Disney-Lookbook-Tile.jpg" alt="">
             </a>
-            <div class="product__title">
-              <a href="#">Product name</a>
-            </div>
-            <div class="product__meta">
-              <span class="product__price">$0.00</span>
-            </div>
-          </li>
-          <li class="product col col-xs-6 col-sm-6 col-md-3">
-            <a href="#">
-              <figure class="product__media">
-                <img src="http://via.placeholder.com/450x610/000000/FFFFFF?text=PRODUCT" class="product__image" alt="">
-              </figure>
-            </a>
-            <div class="product__title">
-              <a href="#">Product name</a>
-            </div>
-            <div class="product__meta">
-              <span class="product__price">$0.00</span>
-            </div>
           </li>
         </ul>
-      </section>
-      <!-- Instagram feed -->
-      <section class="product__instagram">
-        <h2>@Instagram #CompanyName</h2>
-        <div class="row">
-          <div class="col col-xs-12 col-sm-6">
-            <ul class="row">
-              <li class="col-6 col-xs-4 col-sm-4 col-md-4">
-                <img src="http://via.placeholder.com/220/222222/FFFFFF" class="product__image" alt="">
-              </li>
-              <li class="col-6 col-xs-4 col-sm-4 col-md-4">
-                <img src="http://via.placeholder.com/220/222222/FFFFFF" class="product__image" alt="">
-              </li>
-              <li class="col-6 col-xs-4 col-sm-4 col-md-4">
-                <img src="http://via.placeholder.com/220/222222/FFFFFF" class="product__image" alt="">
-              </li>
-              <li class="col-6 col-xs-4 col-sm-4 col-md-4">
-                <img src="http://via.placeholder.com/220/222222/FFFFFF" class="product__image" alt="">
-              </li>
-              <li class="col-6 col-xs-4 col-sm-4 col-md-4">
-                <img src="http://via.placeholder.com/220/222222/FFFFFF" class="product__image" alt="">
-              </li>
-              <li class="col-6 col-xs-4 col-sm-4 col-md-4">
-                <img src="http://via.placeholder.com/220/222222/FFFFFF" class="product__image" alt="">
-              </li>
-            </ul>
-          </div>
-          <div class="col col-xs-12 col-sm-6">
-            <div class="media">
-              <embed src="./assets/chicken.pdf#view=FitH&toolbar=0">
-              <!-- <img src="http://via.placeholder.com/536x350/222222/FFFFFF?text=EMBED" alt=""> -->
+        <!-- Products -->
+        <ul class="row">
+          <!-- Product 1 -->
+          <li class="product col col-xs-6 col-sm-6 col-md-3">
+            <a href="#">
+              <figure class="product__media">
+                <img src="https://media.dollskill.com/media/8NhgYxOPBJpWyDBFXtmmlwi4sasrMxWW-34.jpg" class="product__image" alt="Inu Lover T-shirt">
+              </figure>
+            </a>
+            <div class="product__title">
+              <a href="#">Shiba Inu T-shirt</a>
+            </div>
+            <div class="product__meta">
+              <span class="product__price">$3.14159265359</span>
+            </div>
+            <a href="#" class="product__wishlist">
+              <i aria-hidden="true" class="icon icon-heart-empty"></i>
+              <span class="v-hidden-sm-down v-hidden-sm-up">Add to wishlist</span>
+            </a>
+          </li>
+          <!-- Product 2 -->
+          <li class="product col col-xs-6 col-sm-6 col-md-3">
+            <a href="#">
+              <figure class="product__media">
+                <img src="https://media.dollskill.com/media/MyOefgjirSlvBl23vnXAaeVKmCQjG7sf-34.jpg" class="product__image" alt="Sushi Crossbody Bag">
+              </figure>
+            </a>
+            <div class="product__title">
+              <a href="#">Sushi Crossbody Bag</a>
+            </div>
+            <div class="product__meta">
+              <span class="product__price">$9000.01</span>
+            </div>
+            <a href="#" class="product__wishlist">
+              <i aria-hidden="true" class="icon icon-heart-empty"></i>
+              <span class="v-hidden-sm-down v-hidden-sm-up">Add to wishlist</span>
+            </a>
+          </li>
+          <!-- Product 3 -->
+          <li class="product col col-xs-6 col-sm-6 col-md-3">
+            <a href="#">
+              <figure class="product__media">
+                <img src="https://media.dollskill.com/media/8zFxwsbaL6yOLBnGS3b64HwIvtsOQaXI-34.jpg" class="product__image" alt="Kitten Crop Hoodie">
+              </figure>
+            </a>
+            <div class="product__title">
+              <a href="#">Kitten Crop Hoodie</a>
+            </div>
+            <div class="product__meta">
+              <span class="product__price">$1÷0.00</span>
+            </div>
+            <a href="#" class="product__wishlist">
+              <i aria-hidden="true" class="icon icon-heart-empty"></i>
+              <span class="v-hidden-sm-down v-hidden-sm-up">Add to wishlist</span>
+            </a>
+          </li>
+          <!-- Product 4 -->
+          <li class="product col col-xs-6 col-sm-6 col-md-3">
+            <a href="#">
+              <figure class="product__media">
+                <img src="https://media.dollskill.com/media/arU6H8iOcfQOVWrwBvbQgq6GYccJVca5-34.jpg" class="product__image" alt="Kitten Crossbody Bag">
+              </figure>
+            </a>
+            <div class="product__title">
+              <a href="#">Kitten Crossbody Bag</a>
+            </div>
+            <div class="product__meta">
+              <span class="product__price">$13.37</span>
+            </div>
+            <a href="#" class="product__wishlist">
+              <i aria-hidden="true" class="icon icon-heart-empty"></i>
+              <span class="v-hidden-sm-down v-hidden-sm-up">Add to wishlist</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Instagram feed -->
+        <section class="product__social">
+          <h2>Latest from #BabyfaceClothing</h2>
+          <div class="row">
+            <div class="col col-xs-12 col-sm-6">
+              <ul class="row">
+                <!-- Image 1 -->
+                <li class="col-6 col-xs-4 col-sm-4 col-md-4">
+                  <a href="#" aria-hidden="true">
+                    <img
+                      src="https://scontent-arn2-2.cdninstagram.com/vp/22b4bce3bc8a1ca36b575b8f58123670/5E1D0E12/t51.2885-15/e35/c0.135.1080.1080a/s240x240/66820093_128492275088327_883450893803279686_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=111"
+                      class="product__image"
+                      alt=""
+                    >
+                  </a>
+                </li>
+                <!-- Image 2-->
+                <li class="cl-6 col-xs-4 col-sm-4 col-md-4">
+                  <a href="#" aria-hidden="true">
+                    <img
+                      src="https://scontent-arn2-2.cdninstagram.com/vp/6f38f9f9bc1da7c6f9ecb7238c8975e5/5E3A8A95/t51.2885-15/e35/s240x240/68679180_191005835250536_7479979306265507667_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108"
+                      class="product__image"
+                      alt=""
+                    >
+                  </a>
+                </li>
+                <!-- Image 3 -->
+                <li class="col-6 col-xs-4 col-sm-4 col-md-4">
+                  <a href="#" aria-hidden="true">
+                    <img
+                      src="https://scontent-arn2-2.cdninstagram.com/vp/2d80da484622e2cefa260edb018debf6/5E16D30B/t51.2885-15/e35/s240x240/64936748_470124900492005_2931756158999874454_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105"
+                      class="product__image" 
+                      alt=""
+                    >
+                  </a>
+                </li>
+                <!-- Image 4 -->
+                <li class="col-6 col-xs-4 col-sm-4 col-md-4">
+                  <a href="#" aria-hidden="true">
+                    <img
+                      src="https://scontent-arn2-2.cdninstagram.com/vp/6e8d41adb3e93416f8fb4781589aba7e/5E20D48B/t51.2885-15/e35/c0.179.1440.1440a/s240x240/68749339_569517156917999_930245520081869616_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=111"
+                      class="product__image" 
+                      alt=""
+                    >
+                  </a>
+                </li>
+                <!-- Image 5 -->
+                <li class="col-6 col-xs-4 col-sm-4 col-md-4">
+                  <a href="#" aria-hidden="true">
+                    <img
+                      src="https://scontent-arn2-2.cdninstagram.com/vp/f21ceb5a422ac8c85b0d61d757ca25fc/5E202013/t51.2885-15/e35/c0.135.1080.1080a/s240x240/65782221_354181971927217_3376296039178766539_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=101"
+                      class="product__image" 
+                      alt=""
+                    >
+                  </a>
+                </li>
+                <!-- Image 6 -->
+                <li class="col-6 col-xs-4 col-sm-4 col-md-4">
+                  <a href="#" aria-hidden="true">
+                    <img
+                      src="https://scontent-arn2-2.cdninstagram.com/vp/4194bbc9f53a6564ce63958d61921d54/5E37D23A/t51.2885-15/e35/c153.0.1133.1133a/s320x320/69357883_2164240683681292_5761104845682147494_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=104"
+                      class="product__image" 
+                      alt=""
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col col-xs-12 col-sm-6">
+              <!-- I don't know how to work an embedded PDF file into a webshop for clothes, so here's some chicken chicken chicken -->
+              <div class="media">
+                <embed src="./assets/chicken.pdf#view=FitH&toolbar=0">
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+      <!-- Back to top button -->
+      <a href="#" id="top" aria-label="Back to top">
+        <i aria-hidden="true" class="icon-up-big"></i>
+      </a>
     </main>
-
     <!-- Footer -->
     <footer role="contentinfo">
       <div class="container">
         <div class="row">
           <!-- Help -->
-          <section class="col-6 col-xs-6 col-sm-4">
+          <section class="col-6 col-xs-6 col-sm-2 col-sm-offset-1">
             <h2 class="white--text">Help</h2>
             <ul class="grey-light--text">
               <li>
@@ -246,7 +334,7 @@
             </ul>
           </section>
           <!-- About -->
-          <section class="col-6 col-xs-6 col-sm-4">
+          <section class="col-6 col-xs-6 col-sm-2">
             <h2 class="white--text">About</h2>
             <ul class="grey-light--text">
               <li>
@@ -260,8 +348,12 @@
               </li>
             </ul>
           </section>
+          <!-- Company icon -->
+          <div class="col-xs-2 hidden-sm-down text-center">
+            <img src="./assets/swirl.svg" alt="">
+          </div>
           <!-- Newsletter -->
-          <section class="col col-xs-12 col-sm-4">
+          <section class="col col-xs-12 col-sm-4 col-md-4 col-sm-offset-1">
             <h2 class="white--text">Newsletter</h2>
             <p>Subscribe now and get 10% off your first order!</p>
             <form>
@@ -275,41 +367,46 @@
         <div class="social">
           <ul class="row">
             <li>
-              <button class="btn btn--icon">
+              <a href="#" class="btn btn--icon" aria-label="Instagram">
                 <i aria-hidden="true" class="icon icon-instagram"></i>
-              </button>
+              </a>
             </li>
             <li>
-              <button class="btn btn--icon">
+              <a href="#" class="btn btn--icon" aria-label="Twitter">
                 <i aria-hidden="true" class="icon icon-twitter"></i>
-              </button>
+              </a>
             </li>
             <li>
-              <button class="btn btn--icon">
+              <a href="#" class="btn btn--icon" aria-label="Snapchat">
                 <i aria-hidden="true" class="icon icon-snapchat"></i>
-              </button>
+              </a>
             </li>
             <li>
-              <button class="btn btn--icon">
+              <a href="#" class="btn btn--icon" aria-label="Facebook">
                 <i aria-hidden="true" class="icon icon-facebook"></i>
-              </button>
+              </a>
             </li>
             <li>
-              <button class="btn btn--icon">
+              <a href="#" class="btn btn--icon" aria-label="YouTube">
                 <i aria-hidden="true" class="icon icon-youtube"></i>
-              </button>
+              </a>
             </li>
             <li>
-              <button class="btn btn--icon">
+              <a href="#" class="btn btn--icon" aria-label="Tumblr">
                 <i aria-hidden="true" class="icon icon-tumblr"></i>
-              </button>
+              </a>
             </li>
             <li>
-              <button class="btn btn--icon">
+              <a href="#" class="btn btn--icon" aria-label="Pinterest">
                 <i aria-hidden="true" class="icon icon-pinterest"></i>
-              </button>
+              </a>
             </li>
           </ul>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <small>Stealing candy from babies since 2019</small>
+          </div>
         </div>
       </div>
     </footer>

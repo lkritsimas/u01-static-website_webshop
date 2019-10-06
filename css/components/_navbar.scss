@@ -1,42 +1,133 @@
 .navbar {
   display: flex;
   flex-flow: row wrap;
-  // justify-content: space-between;
   align-items: center;
+  height: 100%;
   background-color: get-color('black');
   padding-right: $grid-gutter / 1.5;
   padding-left: $grid-gutter / 1.5;
-  
+
   a {
     text-decoration: none;
   }
     
-  a,
-  button {
+  .navbar__link,
+  .navbar__button {
     color: get-color('white');
-    padding: $grid-gutter / 2;
+    justify-content: center;
+    padding: $grid-gutter / 1.2 $grid-gutter / 2.4;
+  }
+
+  .navbar__button {
+    @include responsive('xs') {
+      width: 64px;
+    }
+  }
+
+  .navbar__menu a:hover,
+  .navbar__actions button:hover,
+  .navbar__search button:hover,
+  .navbar__toggle-checkbox:hover ~ .navbar__toggle > button {
+    color: get-color('black');
+    background: get-color('white');
+  }
+
+  .navbar__menu a.sale--text:hover {
+    color: get-color('white') !important;
+    background: get-color('sale');
+  }
+
+  // Welcome to the great shitshow that is my navbar hamburger button
+  // Doesn't work across all browsers, but it should at least work well on Chrome, Safari and Opera
+  @media (max-width: map-get($grid-breakpoints, 'xs') - 1) {
+    // Icons change width on this breakpoint, hidden checkbox has to follow along
+    .navbar__toggle-checkbox {
+      width: 48px !important;
+    }
+  }
+  @media (max-width: map-get($grid-breakpoints, 'sm') - 1) {
+    .navbar__toggle-checkbox {
+      // Just in case
+      z-index: 1;
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;      
+      opacity: 0;
+      width: 64px;
+      height: 64px;
+    }
+    // Reordering elements
+    .navbar__toggle-checkbox:checked ~ .navbar__toggle {
+      order: 0;
+    }
+    .navbar__toggle-checkbox:checked  ~ .navbar__actions {
+      order: 1;
+    }
+    .navbar__toggle-checkbox:checked  ~ .navbar__menu {
+      order: 2;
+      // Override for display none
+      display: flex !important;
+      width: 100%;
+
+      ul {
+        padding: 12px 0;
+      }
+      li {
+        display: flex;
+        margin-left: 0;
+      }
+      a {
+        flex-grow: 1;
+        padding: 12px;
+      }
+    }
   }
 }
 
-// Toggle button
+.navbar__toggle-checkbox {
+  display: none;
+}
+
+// Mobile toggle button
 .navbar__toggle {
+  margin-right: $grid-gutter / 1.5;
   margin-left: -$grid-gutter / 1.5;
+
+  button {
+    height: 100%;
+  }
 }
 
 // Navbar title
 .navbar__title {
-  a {
-    color: get-color('white');
-    text-transform: uppercase;
-    font-size: 24px;
+  img {
+    height: 32px;
+    
+    // Increase height xs and up
+    @include responsive('xs') {
+      height: 42px;
+    }
   }
 }
 
 .navbar__menu {
   flex-direction: column;
+  height: 100%;
+
   a {
-    font-size: 16px;
+    font-size: 18px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+
+    height: 100%;
+    align-items: center;
+    display: flex;
+  }
+
+  li:first-child {
+    margin-left: 16px;
   }
 }
 
@@ -44,7 +135,11 @@
 .navbar__menu,
 .navbar__actions {
   display: flex;
-  list-style: none;
+  height: 100%;
+
+  button {
+    height: 100%;
+  }
 
   @include responsive('sm') {
     flex-direction: row;
@@ -55,9 +150,11 @@
 .navbar__search {
   display: flex;
   align-items: center;
+  height: 100%;
 
   // Search button
-  .btn {
+  button {
+    height: 100%;
     color: get-color('white');
   }
 }

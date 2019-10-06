@@ -41,6 +41,10 @@
           @include col;
           flex-basis: $flex-basis-base * $i;
         }
+        // Grid offset
+        &-#{$threshold}-offset-#{$i} {
+          margin-left: $flex-basis-base * $i;
+        }        
       }
     }
   }
